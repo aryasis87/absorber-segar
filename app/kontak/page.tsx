@@ -392,7 +392,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-lg">Navigasi</h3>
                     <p>Koordinat: -6.917464, 107.619125</p>
-                    <a href="#" className="text-[#8CCF42] hover:underline">Petunjuk arah di Google Maps</a>
+                    <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" className="text-[#8CCF42] hover:underline">Petunjuk arah di Google Maps</a>
                   </div>
                 </div>
               </motion.div>

@@ -96,7 +96,7 @@ export default function Navbar() {
                 >
                   <div className="py-2">
                     <Link 
-                      href="/produk/ethylene-absorber" 
+                      href="/#features" 
                       className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition"
                     >
                       <ShoppingBag size={18} className="text-[#55A630]" />
@@ -106,7 +106,7 @@ export default function Navbar() {
                       </div>
                     </Link>
                     <Link 
-                      href="/produk/kemasan-buah" 
+                      href="/#features" 
                       className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition"
                     >
                       <PackageIcon className="text-[#55A630]" />
@@ -219,14 +219,14 @@ export default function Navbar() {
                     exit={{ opacity: 0, height: 0 }}
                   >
                     <Link 
-                      href="/produk/ethylene-absorber" 
+                      href="/#features" 
                       className="block py-2 text-gray-600 hover:text-[#55A630]"
                       onClick={() => setOpen(false)}
                     >
                       Ethylene Absorber
                     </Link>
                     <Link 
-                      href="/produk/kemasan-buah" 
+                      href="/#features" 
                       className="block py-2 text-gray-600 hover:text-[#55A630]"
                       onClick={() => setOpen(false)}
                     >

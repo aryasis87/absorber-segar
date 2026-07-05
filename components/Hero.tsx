@@ -161,7 +161,7 @@ export default function Hero() {
                 className="flex flex-wrap gap-4"
               >
                 <motion.a
-                  href="/produk"
+                  href="/#features"
                   whileHover={{
                     scale: 1.05,
                     boxShadow: '0 10px 25px -5px rgba(85, 166, 48, 0.4)'
