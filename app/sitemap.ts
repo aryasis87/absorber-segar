@@ -1,5 +1,5 @@
 export default function sitemap() {
   return [
-    { url: "https://absorber-segar.vercel.app", lastModified: new Date(), changeFrequency: "monthly", priority: 1 },
+    { url: "https://absorber-segar.pintuweb.com", lastModified: new Date(), changeFrequency: "monthly", priority: 1 },
   ];
 }
