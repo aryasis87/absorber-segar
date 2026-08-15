@@ -16,25 +16,25 @@ const sections = [
 
 export default function PrivacyPage() {
   return (
-    <main className="mx-auto max-w-3xl px-6 pt-28 pb-20 sm:pt-32">
-      <p className="text-sm font-semibold uppercase tracking-wider text-[#7DBE33]">Legal</p>
-      <h1 className="mt-2 text-4xl font-bold text-gray-900 sm:text-5xl">Kebijakan Privasi</h1>
-      <p className="mt-4 text-gray-500">Terakhir diperbarui: 6 Juli 2026</p>
-      <p className="mt-6 leading-relaxed text-gray-600">
+    <div className="mx-auto max-w-3xl px-6 pt-32 pb-20 sm:pt-40">
+      <p className="cap text-grass">Legal</p>
+      <h1 className="mt-4 text-[2.3rem] font-extrabold tracking-[-0.03em] text-rind sm:text-5xl">Kebijakan Privasi</h1>
+      <p className="mt-5 text-sm font-bold text-rind/50">Terakhir diperbarui: 6 Juli 2026</p>
+      <p className="mt-6 leading-relaxed text-rind/75">
         Privasi Anda penting bagi kami. Kebijakan ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi Anda saat menggunakan situs dan layanan kami.
       </p>
-      <div className="mt-10 space-y-8">
+      <div className="mt-12 space-y-5">
         {sections.map((s) => (
-          <section key={s.h}>
-            <h2 className="text-xl font-semibold text-gray-900">{s.h}</h2>
-            <p className="mt-2 leading-relaxed text-gray-600">{s.p}</p>
+          <section key={s.h} className="rounded-3xl bg-cream-2/50 px-7 py-6">
+            <h2 className="text-lg font-extrabold text-rind">{s.h}</h2>
+            <p className="mt-2 text-sm leading-relaxed text-rind/75">{s.p}</p>
           </section>
         ))}
       </div>
-      <div className="mt-12 rounded-2xl border border-gray-200 bg-gray-50 p-6">
-        <p className="text-gray-600">Ada pertanyaan tentang privasi Anda?</p>
-        <Link href="/kontak" className="mt-2 inline-block font-semibold text-[#7DBE33] hover:underline">Hubungi kami →</Link>
+      <div className="mt-10 rounded-[2rem] bg-grass px-8 py-8 text-center">
+        <p className="text-sm text-cream/85">Ada pertanyaan tentang privasi Anda?</p>
+        <Link href="/kontak" className="mt-4 inline-flex items-center justify-center rounded-full bg-zest px-6 py-3 text-sm font-extrabold text-rind">Hubungi kami →</Link>
       </div>
-    </main>
+    </div>
   );
 }

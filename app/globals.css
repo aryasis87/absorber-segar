@@ -1,16 +1,100 @@
 @import "tailwindcss";
 
+/* ==========================================================================
+   EthyleneAbsorber — Konsep "Segar"
+   Bahasa desain: PASAR PAGI (poster pedagang buah)
+   Varian ini sengaja jadi yang paling lantang di antara kandidat: warna
+   datar yang berani, huruf besar, bentuk membulat, dan stiker miring —
+   seperti papan harga di los buah yang baru dibuka pagi hari.
+   ========================================================================== */
 
-:root {
-}
+@theme {
+  --color-rind: #0b3d2c; /* hijau kulit — teks & bidang gelap */
+  --color-grass: #12a150; /* hijau utama */
+  --color-grass-deep: #0e8442;
+  --color-zest: #c6f24e; /* lime terang — aksen lantang */
+  --color-citrus: #ff8a3d; /* jingga — penanda kedua */
+  --color-cream: #fdfbf2; /* krem hangat */
+  --color-cream-2: #f3efdf;
 
-@theme inline {
-}
-
-@media (prefers-color-scheme: dark) {
+  --font-sans: var(--font-display), ui-sans-serif, system-ui, sans-serif;
 }
 
 body {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  background-color: var(--color-cream);
+  color: var(--color-rind);
 }
 
-h1, h2, h3 { font-family: var(--font-display), system-ui, sans-serif; letter-spacing: -0.02em; }
+h1,
+h2,
+h3 {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+/* --------------------------------------------------------------------------
+   1. Stiker — label miring seperti tempelan harga
+   -------------------------------------------------------------------------- */
+.sticker {
+  display: inline-block;
+  transform: rotate(-3deg);
+  border-radius: 999px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.sticker-r {
+  transform: rotate(2.5deg);
+}
+
+/* --------------------------------------------------------------------------
+   2. Label kapital tebal
+   -------------------------------------------------------------------------- */
+.cap {
+  font-size: 0.75rem;
+  line-height: 1.3;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+/* --------------------------------------------------------------------------
+   3. Pita bergerigi — tepi bergelombang khas tenda pasar
+   -------------------------------------------------------------------------- */
+.scallop {
+  --s: 22px;
+  height: 11px;
+  background:
+    radial-gradient(circle at 50% 0, transparent 0 45%, currentColor 46% 100%) 0 0 /
+    var(--s) 100%;
+}
+
+/* --------------------------------------------------------------------------
+   4. Bintik buah — latar bertitik besar
+   -------------------------------------------------------------------------- */
+.speckle {
+  background-image: radial-gradient(currentColor 2.5px, transparent 2.5px);
+  background-size: 26px 26px;
+  opacity: 0.14;
+}
+
+/* --------------------------------------------------------------------------
+   5. Aksesibilitas
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:where(a, button, input, textarea, select, summary):focus-visible {
+  outline: 3px solid var(--color-rind);
+  outline-offset: 3px;
+}

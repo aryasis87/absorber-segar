@@ -3,7 +3,13 @@ import { Plus_Jakarta_Sans } from "next/font/google"
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
-const display = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-display", weight: ["600","700","800"] })
+/* Plus Jakarta Sans memikul seluruh teks — bobot 800 untuk judul lantang. */
+const display = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-display",
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+})
 
 const __jsonld = {"@context":"https://schema.org","@type":"CreativeWork","name":"EthyleneAbsorber — Konsep Segar","description":"Landing page produk ethylene absorber","url":"https://absorber-segar.pintuweb.com"};
 
@@ -39,12 +45,22 @@ export const metadata = {
   },
 }
 
+export const viewport = {
+  themeColor: "#12a150",
+}
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="id" className="scroll-smooth">
-      <body className={`${display.variable} antialiased bg-white text-gray-800 selection:bg-lime-200 selection:text-black overflow-x-hidden max-w-[100vw]`}>
+      <body className={`${display.variable} antialiased bg-cream text-rind selection:bg-zest selection:text-rind overflow-x-hidden max-w-[100vw]`}>
         <Navbar />
-        <main>{children}</main>
+        <a
+          href="#konten"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-rind focus:px-5 focus:py-3 focus:text-sm focus:font-bold focus:text-cream"
+        >
+          Lompat ke konten utama
+        </a>
+        <main id="konten">{children}</main>
         <Footer />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(__jsonld) }} />
         </body>
