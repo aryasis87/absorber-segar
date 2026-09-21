@@ -11,10 +11,10 @@ const display = Plus_Jakarta_Sans({
   display: "swap",
 })
 
-const __jsonld = {"@context":"https://schema.org","@type":"CreativeWork","name":"EthyleneAbsorber — Konsep Segar","description":"Landing page produk ethylene absorber","url":"https://absorber-segar.pintuweb.com"};
+const __jsonld = {"@context":"https://schema.org","@type":"CreativeWork","name":"EthyleneAbsorber — Konsep Segar","description":"Landing page produk ethylene absorber","url":"https://absorber-segar.vercel.app"};
 
 export const metadata = {
-  metadataBase: new URL("https://absorber-segar.pintuweb.com"),
+  metadataBase: new URL("https://absorber-segar.vercel.app"),
   title: "EthyleneAbsorber — Konsep Segar | Dickson Synergy",
   description: "Landing page EthyleneAbsorber konsep \"Segar\": jaga kesegaran buah lebih lama dengan teknologi ethylene absorber berkualitas tinggi.",
   applicationName: "EthyleneAbsorber",
@@ -22,11 +22,11 @@ export const metadata = {
   authors: [{ name: "EthyleneAbsorber" }],
   creator: "EthyleneAbsorber",
   publisher: "EthyleneAbsorber",
-  alternates: { canonical: "https://absorber-segar.pintuweb.com" },
+  alternates: { canonical: "https://absorber-segar.vercel.app" },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://absorber-segar.pintuweb.com",
+    url: "https://absorber-segar.vercel.app",
     siteName: "EthyleneAbsorber",
     title: "EthyleneAbsorber — Konsep Segar | Dickson Synergy",
     description: "Landing page EthyleneAbsorber konsep \"Segar\": jaga kesegaran buah lebih lama dengan teknologi ethylene absorber berkualitas tinggi.",
