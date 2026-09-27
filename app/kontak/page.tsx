@@ -80,8 +80,8 @@ export default function KontakPage() {
                   </div>
                   <h2 className="text-2xl font-extrabold text-rind">Sudah masuk!</h2>
                   <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-rind/70">
-                    Terima kasih. Kami cek datanya dan menghubungi Anda kembali di jam kerja
-                    berikutnya.
+                    Terima kasih! Halaman ini konsep desain untuk kontes, jadi formulirnya belum
+                    tersambung dan datanya tidak terkirim.
                   </p>
                   <button
                     onClick={() => setSelesai(false)}
