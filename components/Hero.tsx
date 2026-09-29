@@ -59,7 +59,7 @@ export default function Hero() {
           <div className="relative mx-auto w-full max-w-md lg:mx-0 lg:max-w-none">
             <div className="relative aspect-square w-full overflow-hidden rounded-[3rem] border-4 border-cream/25 bg-grass-deep">
               <Image
-                src="/images/fruit-sachet.webp"
+                src="/images/sachet-buah.webp"
                 alt="Sachet EthyleneAbsorber bersama buah segar"
                 fill
                 priority
