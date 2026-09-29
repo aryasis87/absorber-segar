@@ -10,8 +10,9 @@
 
 @theme {
   --color-rind: #0b3d2c; /* hijau kulit — teks & bidang gelap */
-  --color-grass: #12a150; /* hijau utama */
-  --color-grass-deep: #0e8442;
+  --color-grass: #0d8040; /* hijau utama (didalamkan dari #12a150 agar teks krem di atasnya lolos kontras 4,5:1) */
+  --color-grass-deep: #0a6a35;
+  --color-grass-ink: #0b7a3b; /* hijau untuk teks & bidang berteks krem — kontras 5:1 */
   --color-zest: #c6f24e; /* lime terang — aksen lantang */
   --color-citrus: #ff8a3d; /* jingga — penanda kedua */
   --color-cream: #fdfbf2; /* krem hangat */

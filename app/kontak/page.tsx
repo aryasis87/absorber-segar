@@ -41,7 +41,7 @@ export default function KontakPage() {
           <h1 className="text-[2.4rem] leading-[1.02] font-extrabold text-cream md:text-[3.4rem]">
             Sebutkan buahnya, kami hitung sachetnya
           </h1>
-          <p className="mx-auto mt-5 max-w-lg leading-relaxed text-cream/85">
+          <p className="mx-auto mt-5 max-w-lg leading-relaxed text-cream">
             Isi datanya sebentar. Kami balas dengan hitungan kebutuhan dan kirim sample untuk
             dicoba sendiri.
           </p>
@@ -54,10 +54,12 @@ export default function KontakPage() {
           <dl className="mb-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {saluran.map((s) => (
               <div key={s.label} className="rounded-3xl bg-cream-2/50 p-6">
-                <span className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-grass text-cream">
-                  <s.icon size={19} strokeWidth={2.2} />
-                </span>
-                <dt className="cap text-rind/50">{s.label}</dt>
+                <dt>
+                  <span aria-hidden="true" className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-grass text-cream">
+                    <s.icon size={19} strokeWidth={2.2} />
+                  </span>
+                  <span className="cap text-rind/80">{s.label}</span>
+                </dt>
                 <dd className="mt-2 text-sm font-bold text-rind">
                   {s.href ? (
                     <a href={s.href} className="break-all transition-colors hover:text-grass">
@@ -79,7 +81,7 @@ export default function KontakPage() {
                     <Check size={30} strokeWidth={3} />
                   </div>
                   <h2 className="text-2xl font-extrabold text-rind">Sudah masuk!</h2>
-                  <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-rind/70">
+                  <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-rind/80">
                     Terima kasih! Halaman ini konsep desain untuk kontes, jadi formulirnya belum
                     tersambung dan datanya tidak terkirim.
                   </p>
@@ -104,7 +106,7 @@ export default function KontakPage() {
                   <Field label="Tujuan kirim" name="rute" value={form.rute} onChange={ubah} placeholder="Mis. Surabaya → Makassar" required />
 
                   <div>
-                    <label htmlFor="catatan" className="cap mb-2.5 block text-rind/60">
+                    <label htmlFor="catatan" className="cap mb-2.5 block text-rind/80">
                       Catatan
                     </label>
                     <textarea
@@ -126,7 +128,7 @@ export default function KontakPage() {
                     {mengirim ? 'Mengirim…' : 'Kirim & Minta Sample'}
                   </button>
 
-                  <p className="text-center text-xs leading-relaxed text-rind/45">
+                  <p className="text-center text-xs leading-relaxed text-rind/80">
                     Purwarupa desain — pengiriman formulir disimulasikan dan data tidak tersimpan.
                   </p>
                 </motion.form>
@@ -134,7 +136,7 @@ export default function KontakPage() {
             </AnimatePresence>
           </div>
 
-          <p className="mt-10 text-center text-sm text-rind/70">
+          <p className="mt-10 text-center text-sm text-rind/80">
             Banyak yang sudah terjawab di{' '}
             <Link href="/faq" className="font-extrabold text-grass underline-offset-4 hover:underline">
               halaman tanya jawab
@@ -161,7 +163,7 @@ function Field({
 }) {
   return (
     <div>
-      <label htmlFor={name} className="cap mb-2.5 block text-rind/60">
+      <label htmlFor={name} className="cap mb-2.5 block text-rind/80">
         {label}
         {required && <span className="ml-1 text-citrus">*</span>}
       </label>

@@ -38,12 +38,12 @@ export default function Features() {
                   {no}
                 </span>
                 <h3 className="mt-5 text-lg font-extrabold text-cream">{title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-cream/70">{desc}</p>
+                <p className="mt-2 text-sm leading-relaxed text-cream">{desc}</p>
               </li>
             ))}
           </ol>
 
-          <p className="mt-10 rounded-3xl border-2 border-cream/20 px-7 py-6 text-sm leading-relaxed text-cream/80">
+          <p className="mt-10 rounded-3xl border-2 border-cream/20 px-7 py-6 text-sm leading-relaxed text-cream">
             <strong className="font-extrabold text-zest">Perlu diingat.</strong> Reaksinya searah —
             gas yang sudah diserap tidak akan lepas lagi meski suhu berubah selama perjalanan.{' '}
             <Link href="/faq" className="font-extrabold text-zest underline-offset-4 hover:underline">
@@ -79,11 +79,16 @@ export default function Features() {
                 </div>
                 <div className="p-7">
                   <h3 className="text-lg font-extrabold text-rind">{s.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-rind/70">{s.desc}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-rind/80">{s.desc}</p>
                 </div>
               </article>
             ))}
           </div>
+          <p className="mt-12 text-center">
+            <Link href="/kamus-buah" className="sticker inline-block bg-zest px-6 py-3 text-sm text-rind">
+              Cek 12 buah di Kamus Buah →
+            </Link>
+          </p>
         </div>
       </section>
     </>

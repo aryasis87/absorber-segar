@@ -1,40 +1,12 @@
-import Link from 'next/link';
+import LegalPoster from '@/components/LegalPoster';
+import { DIPERBARUI, PRIVASI } from '@/lib/legal';
 
 export const metadata = {
   title: 'Kebijakan Privasi',
-  description: 'Kebijakan privasi EthyleneAbsorber — bagaimana kami mengumpulkan, menggunakan, dan melindungi data Anda.',
+  description: 'Data apa yang kami minta saat Anda minta sample EthyleneAbsorber, untuk apa dipakai, dan berapa lama disimpan.',
+  alternates: { canonical: 'https://absorber-segar.vercel.app/privacy' },
 };
 
-const sections = [
-  { h: '1. Informasi yang Kami Kumpulkan', p: 'Kami mengumpulkan informasi yang Anda berikan secara langsung, seperti nama, email, dan nomor telepon saat Anda menghubungi kami atau mengisi formulir. Kami juga mengumpulkan data teknis dasar (seperti jenis perangkat dan halaman yang dikunjungi) untuk meningkatkan layanan.' },
-  { h: '2. Penggunaan Informasi', p: 'Informasi digunakan untuk merespons permintaan Anda, mengirim penawaran yang relevan, memproses pesanan, serta meningkatkan kualitas produk dan layanan kami. Kami tidak menjual data pribadi Anda kepada pihak ketiga.' },
-  { h: '3. Cookie', p: 'Situs kami dapat menggunakan cookie untuk mengingat preferensi dan menganalisis lalu lintas. Anda dapat menonaktifkan cookie melalui pengaturan browser, meski beberapa fitur mungkin tidak berfungsi optimal.' },
-  { h: '4. Keamanan Data', p: 'Kami menerapkan langkah keamanan teknis dan organisasi yang wajar untuk melindungi data Anda dari akses, pengungkapan, atau perubahan yang tidak sah.' },
-  { h: '5. Hak Anda', p: 'Anda berhak mengakses, memperbarui, atau meminta penghapusan data pribadi Anda kapan saja dengan menghubungi kami melalui halaman Kontak.' },
-  { h: '6. Perubahan Kebijakan', p: 'Kebijakan ini dapat diperbarui sewaktu-waktu. Perubahan akan dipublikasikan di halaman ini beserta tanggal pembaruan terbaru.' },
-];
-
 export default function PrivacyPage() {
-  return (
-    <div className="mx-auto max-w-3xl px-6 pt-32 pb-20 sm:pt-40">
-      <p className="cap text-grass">Legal</p>
-      <h1 className="mt-4 text-[2.3rem] font-extrabold tracking-[-0.03em] text-rind sm:text-5xl">Kebijakan Privasi</h1>
-      <p className="mt-5 text-sm font-bold text-rind/50">Terakhir diperbarui: 6 Juli 2026</p>
-      <p className="mt-6 leading-relaxed text-rind/75">
-        Privasi Anda penting bagi kami. Kebijakan ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi Anda saat menggunakan situs dan layanan kami.
-      </p>
-      <div className="mt-12 space-y-5">
-        {sections.map((s) => (
-          <section key={s.h} className="rounded-3xl bg-cream-2/50 px-7 py-6">
-            <h2 className="text-lg font-extrabold text-rind">{s.h}</h2>
-            <p className="mt-2 text-sm leading-relaxed text-rind/75">{s.p}</p>
-          </section>
-        ))}
-      </div>
-      <div className="mt-10 rounded-[2rem] bg-grass px-8 py-8 text-center">
-        <p className="text-sm text-cream/85">Ada pertanyaan tentang privasi Anda?</p>
-        <Link href="/kontak" className="mt-4 inline-flex items-center justify-center rounded-full bg-zest px-6 py-3 text-sm font-extrabold text-rind">Hubungi kami →</Link>
-      </div>
-    </div>
-  );
+  return <LegalPoster judul="Kebijakan Privasi" updated={DIPERBARUI} intro={PRIVASI.intro} bagian={PRIVASI.bagian} />;
 }

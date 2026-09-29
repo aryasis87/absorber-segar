@@ -23,7 +23,7 @@ export default function Hero() {
               tujuan.
             </h1>
 
-            <p className="mt-7 max-w-md text-lg leading-relaxed text-cream/85">
+            <p className="mt-7 max-w-md text-lg leading-relaxed text-cream">
               Satu sachet kecil di dalam peti menyerap gas etilen — pemicu yang membuat buah cepat
               matang dan lembek. Sederhana, murah, dan sudah lolos uji BPOM.
             </p>

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 /* ============================================================================
    Bagian penanda varian ini: kalender 30 hari.
    Alih-alih grafik atau tabel, masa kerja sachet ditunjukkan sebagai kotak
@@ -31,7 +32,7 @@ export default function Calendar() {
             <br />
             Semuanya terjaga.
           </h2>
-          <p className="mx-auto mt-5 max-w-xl leading-relaxed text-rind/70">
+          <p className="mx-auto mt-5 max-w-xl leading-relaxed text-rind/80">
             Tanpa perawatan, buah biasanya sudah tidak layak jual sekitar hari ketujuh. Dengan satu
             sachet di dalam kemasan, seluruh tiga puluh kotak ini masih terjaga.
           </p>
@@ -52,7 +53,7 @@ export default function Calendar() {
                       ? 'bg-citrus text-rind'
                       : lewatTanpa
                         ? 'bg-grass text-cream'
-                        : 'bg-cream-2 text-rind/45'
+                        : 'bg-cream-2 text-rind/80'
                   }`}
                 >
                   {day}
@@ -65,7 +66,7 @@ export default function Calendar() {
             {legend.map((l) => (
               <li key={l.label} className="flex items-center gap-2.5">
                 <span aria-hidden="true" className={`h-4 w-4 rounded-md ${l.color}`} />
-                <span className="text-sm font-bold text-rind/75">{l.label}</span>
+                <span className="text-sm font-bold text-rind/80">{l.label}</span>
               </li>
             ))}
           </ul>
@@ -79,10 +80,15 @@ export default function Calendar() {
           ].map(([t, d]) => (
             <div key={t} className="rounded-2xl bg-cream-2/60 p-6">
               <p className="text-xl font-extrabold text-grass">{t}</p>
-              <p className="mt-2 text-sm leading-relaxed text-rind/70">{d}</p>
+              <p className="mt-2 text-sm leading-relaxed text-rind/80">{d}</p>
             </div>
           ))}
         </div>
+        <p className="mt-10 text-center">
+          <Link href="/hitung" className="sticker sticker-r inline-block bg-rind px-6 py-3 text-sm text-zest">
+            Hitung sachet buat tempat simpan kamu →
+          </Link>
+        </p>
       </div>
     </section>
   );

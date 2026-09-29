@@ -8,8 +8,9 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const NAV = [
   { label: '30 Hari', href: '/#kalender' },
-  { label: 'Cara Pakai', href: '/#cara-kerja' },
-  { label: 'Cocok Untuk', href: '/#penerapan' },
+  { label: 'Kamus Buah', href: '/kamus-buah' },
+  { label: 'Hitung', href: '/hitung' },
+  { label: 'Tips', href: '/tips' },
   { label: 'Tanya Jawab', href: '/faq' },
 ]
 
@@ -56,7 +57,12 @@ export default function Navbar() {
 
         <nav className="hidden items-center gap-6 md:flex" aria-label="Navigasi utama">
           {NAV.map((n) => (
-            <Link key={n.href} href={n.href} className="text-sm font-bold text-rind/75 transition-colors hover:text-grass">
+            <Link
+              key={n.href}
+              href={n.href}
+              aria-current={!n.href.startsWith('/#') && pathname.startsWith(n.href) ? 'page' : undefined}
+              className={`rounded-full px-1 text-sm font-bold transition-colors hover:text-grass-ink ${!n.href.startsWith('/#') && pathname.startsWith(n.href) ? 'bg-zest text-rind' : 'text-rind'}`}
+            >
               {n.label}
             </Link>
           ))}
@@ -94,7 +100,7 @@ export default function Navbar() {
               aria-label="Menu navigasi"
             >
               <div className="flex items-center justify-between px-6 py-5">
-                <span className="cap text-rind/50">Menu</span>
+                <span className="cap text-rind/80">Menu</span>
                 <button onClick={() => setOpen(false)} className="-mr-2 p-2 text-rind" aria-label="Tutup menu">
                   <X size={22} strokeWidth={2.5} />
                 </button>

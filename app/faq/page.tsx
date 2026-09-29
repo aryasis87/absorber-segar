@@ -69,7 +69,7 @@ export default function FaqPage() {
                         transition={{ duration: 0.26, ease: [0.22, 1, 0.36, 1] }}
                         className="overflow-hidden"
                       >
-                        <p className="px-7 pb-7 text-sm leading-relaxed text-rind/75">{a}</p>
+                        <p className="px-7 pb-7 text-sm leading-relaxed text-rind/80">{a}</p>
                       </motion.dd>
                     )}
                   </AnimatePresence>
@@ -80,7 +80,7 @@ export default function FaqPage() {
 
           <div className="mt-12 rounded-[2rem] bg-grass px-8 py-10 text-center text-cream">
             <h2 className="text-2xl font-extrabold text-cream">Masih ada yang mau ditanya?</h2>
-            <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-cream/85">
+            <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-cream">
               Sebutkan buah dan rute kirimnya, kami bantu hitung kebutuhan sachetnya.
             </p>
             <Link

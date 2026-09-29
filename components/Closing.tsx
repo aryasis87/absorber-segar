@@ -19,7 +19,7 @@ export default function Closing() {
       {/* Jaminan */}
       <section id="jaminan" className="relative overflow-hidden bg-cream-2/50 py-16 md:py-20">
         <div className="relative z-10 mx-auto max-w-6xl px-6">
-          <p className="cap mb-8 text-center text-rind/50">Sudah diperiksa</p>
+          <p className="cap mb-8 text-center text-rind/80">Sudah diperiksa</p>
           <dl className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {marks.map(([k, v]) => (
               <div key={k} className="rounded-2xl bg-cream px-6 py-6 text-center">
@@ -44,7 +44,7 @@ export default function Closing() {
             {faqs.map(([q, a]) => (
               <div key={q} className="rounded-3xl bg-cream-2/50 px-7 py-6">
                 <dt className="text-lg font-extrabold text-rind">{q}</dt>
-                <dd className="mt-2 text-sm leading-relaxed text-rind/70">{a}</dd>
+                <dd className="mt-2 text-sm leading-relaxed text-rind/80">{a}</dd>
               </div>
             ))}
           </dl>
@@ -71,7 +71,7 @@ export default function Closing() {
             <br />
             Baru putuskan.
           </h2>
-          <p className="mx-auto mt-6 max-w-xl leading-relaxed text-cream/85">
+          <p className="mx-auto mt-6 max-w-xl leading-relaxed text-cream">
             Sebutkan buahnya, ukuran ruangnya, dan tujuan kirimnya. Kami hitung berapa sachet yang
             dibutuhkan, lalu kirim samplenya.
           </p>

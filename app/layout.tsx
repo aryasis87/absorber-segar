@@ -15,7 +15,10 @@ const __jsonld = {"@context":"https://schema.org","@type":"CreativeWork","name":
 
 export const metadata = {
   metadataBase: new URL("https://absorber-segar.vercel.app"),
-  title: "EthyleneAbsorber — Konsep Segar | Dickson Synergy",
+  title: {
+    default: "EthyleneAbsorber — Konsep Segar | Dickson Synergy",
+    template: "%s — EthyleneAbsorber",
+  },
   description: "Landing page EthyleneAbsorber konsep \"Segar\": jaga kesegaran buah lebih lama dengan teknologi ethylene absorber berkualitas tinggi.",
   applicationName: "EthyleneAbsorber",
   keywords: ["ethylene absorber", "kesegaran buah", "landing page produk", "desain web", "dickson synergy"],
