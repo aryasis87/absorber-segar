@@ -46,7 +46,7 @@ export default function Navbar() {
           scrolled ? 'bg-cream/95 shadow-lg backdrop-blur-md' : 'bg-cream/80 backdrop-blur-sm'
         }`}
       >
-        <Link href="/" className="flex items-center gap-2.5" aria-label="EthyleneAbsorber — beranda">
+        <Link href="/" className="flex items-center gap-2.5">
           <span aria-hidden="true" className="flex h-8 w-8 items-center justify-center rounded-full bg-grass text-sm font-extrabold text-cream">
             E
           </span>

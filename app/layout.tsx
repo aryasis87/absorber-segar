@@ -56,13 +56,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="id" className="scroll-smooth">
       <body className={`${display.variable} antialiased bg-cream text-rind selection:bg-zest selection:text-rind overflow-x-hidden max-w-[100vw]`}>
-        <Navbar />
         <a
           href="#konten"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-rind focus:px-5 focus:py-3 focus:text-sm focus:font-bold focus:text-cream"
         >
           Lompat ke konten utama
         </a>
+        <Navbar />
         <main id="konten">{children}</main>
         <Footer />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(__jsonld) }} />
